@@ -4,27 +4,33 @@
 #include <string>
 using namespace std;
 
-
-struct Place
-{
+struct Place {
     string name;
     int budget;
     float rating;
+
+    Place() {
+        name="";
+        budget=0;
+        rating=0;
+    }
+
+    Place(string n,int b,float r){
+        name=n;
+        budget=b;
+        rating=r;
+    }
 };
 
-
-struct Node
-{
+struct Node {
     Place data;
-    Node *next;
+    Node* next;
 };
 
-void insert(Node *&head, Place p);
-void display(Node *head);
-int countNodes(Node *head);
-void toArray(Node *head, Place arr[]);
+void insert(Node* &head, Place p);
+int countNodes(Node* head);
+void toArray(Node* head, Place arr[]);
 void insertionSort(Place arr[], int n);
 int binarySearch(Place arr[], int n, int key);
-void recommend(Node *head, int userBudget);
 
 #endif
