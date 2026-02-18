@@ -24,7 +24,7 @@ private:
     QLineEdit *input;
     QTextEdit *output;
 
-    Node *head;    // YOUR linked list
+    Node *head;    // linked list
     Stack history; // new stack
 };
 
