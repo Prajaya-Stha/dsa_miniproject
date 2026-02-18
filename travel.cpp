@@ -3,7 +3,6 @@
 
 using namespace std;
 
-// Insert at end
 void insert(Node* &head, Place p) {
     Node* temp = new Node();
     temp->data = p;
@@ -21,7 +20,7 @@ void insert(Node* &head, Place p) {
     curr->next = temp;
 }
 
-// Display places
+
 void display(Node* head) {
     while(head != NULL) {
         cout << "Name: " << head->data.name
@@ -31,7 +30,7 @@ void display(Node* head) {
     }
 }
 
-// Count nodes
+
 int countNodes(Node* head) {
     int c = 0;
     while(head) {
@@ -50,7 +49,7 @@ void toArray(Node* head, Place arr[]) {
     }
 }
 
-// Insertion Sort
+
 void insertionSort(Place arr[], int n) {
     for(int i=1;i<n;i++) {
         Place key = arr[i];
@@ -64,7 +63,7 @@ void insertionSort(Place arr[], int n) {
     }
 }
 
-// Binary Search
+
 int binarySearch(Place arr[], int n, int key) {
     int low=0, high=n-1;
 
